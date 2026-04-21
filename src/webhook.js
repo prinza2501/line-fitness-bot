@@ -38,13 +38,13 @@ async function handleEvent(client, event) {
       const imageBuffer = Buffer.concat(chunks);
       const result = await analyzeFoodImage(imageBuffer);
       const reply = buildFoodReply(result);
-      await client.pushMessage(event.source.userId || event.source.groupId, {
+      await client.pushMessage(event.source.groupId || event.source.userId, {
         type: 'text',
         text: reply,
       });
     } catch (err) {
       console.error('[FOOD] Analysis failed:', err.message);
-      await client.pushMessage(event.source.userId || event.source.groupId, {
+      await client.pushMessage(event.source.groupId || event.source.userId, {
         type: 'text',
         text: `❌ วิเคราะห์ไม่ได้: ${err.message}`,
       });
