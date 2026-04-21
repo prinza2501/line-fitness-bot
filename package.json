@@ -1,0 +1,19 @@
+{
+  "name": "line-fitness-bot",
+  "version": "1.0.0",
+  "description": "AI Fitness Coach LINE Bot for Tha Sala, Nakhon Si Thammarat",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^9.4.0",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "form-data": "^4.0.5",
+    "node-cron": "^3.0.3",
+    "suncalc": "^1.9.0"
+  }
+}
